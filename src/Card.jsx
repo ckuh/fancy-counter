@@ -1,19 +1,20 @@
 import { useState } from "react";
 
 import Count from "./Count";
-import CountButtons from "./CountButtons";
+import ButtonContainer from "./ButtonContainer";
 import ResetButton from "./ResetButton";
 import Title from "./Title";
 
 export default function Card() {
   const [count, setCount] = useState(0);
+  const locked = count === 5;
 
   return (
-    <div className="card">
-      <Title />
+    <div className={`card ${locked ? "card--limit" : ""}`}>
+      <Title locked={locked} />
       <Count count={count} size="lg" />
       <ResetButton setCount={setCount} />
-      <CountButtons setCount={setCount} />
+      <ButtonContainer setCount={setCount} locked={locked} />
     </div>
   );
 }
