@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 
-export default function Count({ number = 0 }) {
-  return <p className="count">{number}</p>;
+export default function Count({ count = 0 }) {
+  return <p className="count">{count}</p>;
 }
 
 Count.propTypes = {
-  number: PropTypes.number,
+  count: PropTypes.count,
 };
