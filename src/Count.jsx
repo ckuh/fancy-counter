@@ -5,5 +5,5 @@ export default function Count({ count = 0 }) {
 }
 
 Count.propTypes = {
-  count: PropTypes.count,
+  count: PropTypes.number,
 };
