@@ -3,8 +3,9 @@ import PropTypes from "prop-types";
 import { ResetIcon } from "@radix-ui/react-icons";
 
 export default function ResetButton({ setCount }) {
-  const handleClick = () => {
+  const handleClick = (e) => {
     setCount(0);
+    e.currentTarget.blur();
   };
 
   return (

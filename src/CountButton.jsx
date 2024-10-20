@@ -5,7 +5,10 @@ export default function CountButton({ disabled = false, setCount, Icon }) {
     <button
       disabled={disabled}
       className="count-btn"
-      onClick={() => setCount()}
+      onClick={(e) => {
+        setCount();
+        e.currentTarget.blur();
+      }}
     >
       <Icon className="count-btn-icon" />
     </button>
